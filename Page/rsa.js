@@ -80,8 +80,7 @@ function decrypt() {
     decryptedMessage += String.fromCharCode(charCode);
   }
 
-  document.getElementById("decryptedResult").textContent =
-    decryptedMessage.toUpperCase(); // Convert to uppercase
+  document.getElementById("decryptedResult").textContent = decryptedMessage.toUpperCase(); // Convert to uppercase
 }
 
 // Function to clear all the input and output fields
