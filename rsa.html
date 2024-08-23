@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RSA</title>
+  <link rel="stylesheet" href="../css/bootstrap.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-transparent navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fs-2 fw-bold py-4" href="../index.html">
+        TEAM11<span class="text-warning">.</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto fw-bold">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../Page/rsa.html">RSA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Page/caesar.html">CAESAR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Page/myteam.html">MY TEAM</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="shadow">
+        <div class="text-light text-center">
+          <h4 class="pt-5 f-5 animate__animated animate__zoomIn">
+            <i class="fa-solid fa-shield-halved"></i> RSA Encryption &
+            Decryption
+          </h4>
+        </div>
+        <div class="container">
+          <div class="row g-3">
+            <div class="col-6 mx-auto box-bg animate__animated animate__zoomIn">
+              <div class="row">
+                <div class="col-12 col-md-12">
+                  <label for="pValue" class="text-light form-label fw-semibold pt-3">Input p Value:</label>
+                  <input type="text" class="form-control" name="pValue" id="pValue" placeholder="Input Number" />
+                </div>
+                <div class="col-12 col-md-12">
+                  <label for="qValue" class="text-light form-label fw-semibold pt-3">Input q Value:</label>
+                  <input type="text" class="form-control" name="qValue" id="qValue" placeholder="Input Number" />
+                </div>
+
+                <div class="col-12 col-md-12">
+                  <label for="eValue" class="text-light form-label fw-semibold pt-3">Input e Value:</label>
+                  <input type="text" class="form-control" name="eValue" id="eValue" placeholder="Input Number" />
+                </div>
+
+                <div class="col-12 mb-2">
+                  <label for="message" class="text-light form-label pt-2">Enter text:</label>
+                  <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+                </div>
+                <div class="col-lg-12 d-md-flex gap-2 pt-2">
+                  <div class="mt-2">
+                    <button type="button" class="btn btn-primary px-4 py-2" id="encryptBtn">
+                      <i class="fa-solid fa-key"></i> Encrypt
+                    </button>
+                  </div>
+                  <div class="mt-2">
+                    <button type="button" class="btn btn-primary px-4 py-2" id="decryptBtn">
+                      <i class="fa-solid fa-shield-halved"></i> Decrypt
+                    </button>
+                  </div>
+                  <div class="mt-2">
+                    <button type="button" class="btn btn-danger px-5 py-2" id="resetBtn">
+                      Reset
+                    </button>
+                  </div>
+                </div>
+                <hr />
+                <div class="text-light">
+                  <hr />
+                  <h6>
+                    Result of Encrypt : <span class="encrypt" id="encryptedResult"></span>
+                  </h6>
+                  <hr />
+                  <h6>
+                    Result of Decrypt : <span class="decrypt" id="decryptedResult"></span>
+                  </h6>
+                  <hr />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="rsa.js"></script>
+</body>
+
+</html>
